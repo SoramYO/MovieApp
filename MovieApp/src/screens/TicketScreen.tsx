@@ -1,17 +1,17 @@
+/* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
-const SearchScreen = () => {
+const TicketScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>SearchScreen</Text>
+      <Text>TicketScreen</Text>
     </View>
   );
 };
 
-
 const styles = StyleSheet.create({
-  container: {}
+  container: {},
 });
 
-export default SearchScreen;
+export default TicketScreen;
