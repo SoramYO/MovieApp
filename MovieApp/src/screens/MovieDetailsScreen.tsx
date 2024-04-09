@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 const MovieDetailScreen = () => {
   return (
@@ -9,9 +10,8 @@ const MovieDetailScreen = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
-  container: {}
+  container: {},
 });
 
 export default MovieDetailScreen;

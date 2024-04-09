@@ -60,10 +60,7 @@ const TabNavigator = () => {
                   styles.activeTabBackground,
                   focused ? {backgroundColor: COLORS.Orange} : {},
                 ]}>
-                <CustomIcon
-                  name="search"
-                  color={COLORS.White}
-                  size={FONTSIZE.size_30}
+                <CustomIcon name="search" color={COLORS.White} size={FONTSIZE.size_30}
                 />
               </View>
             );

@@ -10,21 +10,21 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen
           name="Tab"
           component={TabNavigator}
-          options={{headerShown: false}}
+          options={{animation: 'default'}}
         />
         <Stack.Screen
           name="MovieDetail"
           component={MovieDetailScreen}
-          options={{headerShown: false}}
+          options={{animation: 'slide_from_right'}}
         />
         <Stack.Screen
           name="SeatBooking"
           component={SeatBookingScreen}
-          options={{headerShown: false}}
+          options={{animation: 'slide_from_bottom'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

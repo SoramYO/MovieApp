@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 const SearchScreen = () => {
   return (
@@ -9,9 +10,8 @@ const SearchScreen = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
-  container: {}
+  container: {},
 });
 
 export default SearchScreen;
