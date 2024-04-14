@@ -7,10 +7,10 @@ import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import TicketScreen from '../screens/TicketScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
-import {COLORS, FONTSIZE, SPACING} from '../theme/theme';
+import { COLORS, FONTSIZE, SPACING } from '../theme/theme';
 import CustomIcon from '../components/CustomIcon';
-import {View, StyleSheet} from 'react-native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { View, StyleSheet } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,12 +31,12 @@ const TabNavigator = () => {
         component={HomeScreen}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
                 style={[
                   styles.activeTabBackground,
-                  focused ? {backgroundColor: COLORS.Orange} : {},
+                  focused ? { backgroundColor: COLORS.Orange } : {},
                 ]}>
                 <CustomIcon
                   name="video"
@@ -53,12 +53,12 @@ const TabNavigator = () => {
         component={SearchScreen}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
                 style={[
                   styles.activeTabBackground,
-                  focused ? {backgroundColor: COLORS.Orange} : {},
+                  focused ? { backgroundColor: COLORS.Orange } : {},
                 ]}>
                 <CustomIcon name="search" color={COLORS.White} size={FONTSIZE.size_30}
                 />
@@ -72,12 +72,12 @@ const TabNavigator = () => {
         component={TicketScreen}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
                 style={[
                   styles.activeTabBackground,
-                  focused ? {backgroundColor: COLORS.Orange} : {},
+                  focused ? { backgroundColor: COLORS.Orange } : {},
                 ]}>
                 <CustomIcon
                   name="ticket"
@@ -94,12 +94,12 @@ const TabNavigator = () => {
         component={UserAccountScreen}
         options={{
           tabBarShowLabel: false,
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({ focused, color, size }) => {
             return (
               <View
                 style={[
                   styles.activeTabBackground,
-                  focused ? {backgroundColor: COLORS.Orange} : {},
+                  focused ? { backgroundColor: COLORS.Orange } : {},
                 ]}>
                 <CustomIcon
                   name="user"
