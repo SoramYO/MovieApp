@@ -4,7 +4,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet, TextInput, Touchable } from 'react-native';
 import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import { TouchableOpacity } from 'react-native';
-import CustomIcon from './CustomIcon';
+//import CustomIcon from './CustomIcon';
+import CustomIcon from 'react-native-vector-icons/FontAwesome';
 
 const InputHeader = (props: any) => {
     const [searchText, setSearchText] = React.useState<String>('');

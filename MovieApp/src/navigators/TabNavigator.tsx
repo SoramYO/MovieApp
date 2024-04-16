@@ -8,7 +8,8 @@ import SearchScreen from '../screens/SearchScreen';
 import TicketScreen from '../screens/TicketScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
 import { COLORS, FONTSIZE, SPACING } from '../theme/theme';
-import CustomIcon from '../components/CustomIcon';
+//import CustomIcon from '../components/CustomIcon';
+import CustomIcon from 'react-native-vector-icons/FontAwesome';
 import { View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -39,7 +40,7 @@ const TabNavigator = () => {
                   focused ? { backgroundColor: COLORS.Orange } : {},
                 ]}>
                 <CustomIcon
-                  name="video"
+                  name="home"
                   color={COLORS.White}
                   size={FONTSIZE.size_30}
                 />
