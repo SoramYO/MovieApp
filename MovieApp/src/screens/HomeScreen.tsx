@@ -1,17 +1,23 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable prettier/prettier */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
 /* eslint-disable eqeqeq */
 /* eslint-disable prettier/prettier */
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
+  Text,
   View,
   StyleSheet,
   Dimensions,
+  TouchableOpacity,
   ActivityIndicator,
   ScrollView,
   StatusBar,
   FlatList,
 } from 'react-native';
-import {COLORS, SPACING} from '../theme/theme';
+import { COLORS, SPACING } from '../theme/theme';
 import {
   upcomingMovies,
   nowPlayingMovies,
@@ -23,7 +29,7 @@ import CategoryHeader from '../components/CategoryHeader';
 import SubMovieCard from '../components/SubMovieCard';
 import MovieCard from '../components/MovieCard';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const getNowPlayingMoviesList = async () => {
   try {
@@ -64,7 +70,7 @@ const getPopularMoviesList = async () => {
   }
 };
 
-const HomeScreen = ({navigation}: any) => {
+const HomeScreen = ({ navigation }: any) => {
   const [nowPlayingMoviesList, setNowPlayingMoviesList] =
     useState<any>(undefined);
   const [popularMoviesList, setPopularMoviesList] = useState<any>(undefined);
@@ -74,9 +80,9 @@ const HomeScreen = ({navigation}: any) => {
     (async () => {
       let tempNowPlaying = await getNowPlayingMoviesList();
       setNowPlayingMoviesList([
-        {id: 'dummy1'},
+        { id: 'dummy1' },
         ...tempNowPlaying.results,
-        {id: 'dummy2'},
+        { id: 'dummy2' },
       ]);
 
       let tempPopular = await getPopularMoviesList();
@@ -135,21 +141,21 @@ const HomeScreen = ({navigation}: any) => {
         showsHorizontalScrollIndicator={false}
         decelerationRate={0}
         contentContainerStyle={styles.containerGap36}
-        renderItem={({item, index}) => {
+        renderItem={({ item, index }) => {
           if (!item.original_title) {
             return (
               <View
                 style={{
                   width: (width - (width * 0.7 + SPACING.space_36 * 2)) / 2,
-                }}
-              />
+                }}>
+                </View>
             );
           }
           return (
             <MovieCard
               shoudlMarginatedAtEnd={true}
               cardFunction={() => {
-                navigation.push('MovieDetails', {movieid: item.id});
+                navigation.push('MovieDetails', { movieid: item.id });
               }}
               cardWidth={width * 0.7}
               isFirst={index == 0 ? true : false}
@@ -171,11 +177,11 @@ const HomeScreen = ({navigation}: any) => {
         showsHorizontalScrollIndicator={false}
         bounces={false}
         contentContainerStyle={styles.containerGap36}
-        renderItem={({item, index}) => (
+        renderItem={({ item, index }) => (
           <SubMovieCard
             shoudlMarginatedAtEnd={true}
             cardFunction={() => {
-              navigation.push('MovieDetails', {movieid: item.id});
+              navigation.push('MovieDetails', { movieid: item.id });
             }}
             cardWidth={width / 3}
             isFirst={index == 0 ? true : false}
@@ -193,11 +199,11 @@ const HomeScreen = ({navigation}: any) => {
         bounces={false}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.containerGap36}
-        renderItem={({item, index}) => (
+        renderItem={({ item, index }) => (
           <SubMovieCard
             shoudlMarginatedAtEnd={true}
             cardFunction={() => {
-              navigation.push('MovieDetails', {movieid: item.id});
+              navigation.push('MovieDetails', { movieid: item.id });
             }}
             cardWidth={width / 3}
             isFirst={index == 0 ? true : false}

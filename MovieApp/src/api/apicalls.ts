@@ -14,10 +14,13 @@ export const topRatedMovies : string =
 export const upcomingMovies : string =
     `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey} `;
 export const searchMovies = (query: string) => {
-    return `https://api.themoviedb.org/3/search/movie&query=${query}`;
+    return `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
 };
-export const movieDetail = (id: number) => {
+export const movieDetails = (id: number) => {
     return `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
+};
+export const movieCastDetails = (id: number) => {
+    return `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`;
 };
 export const movieCredits = (id: number) => {
     return `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`;

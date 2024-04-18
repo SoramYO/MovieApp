@@ -8,17 +8,17 @@ import { TouchableOpacity } from 'react-native';
 import CustomIcon from 'react-native-vector-icons/FontAwesome';
 
 const InputHeader = (props: any) => {
-    const [searchText, setSearchText] = React.useState<String>('');
+    const [searchText, setSearchText] = React.useState<string>('');
     return (
         <View style={styles.inputBox}>
             <TextInput style={styles.textInput}
                 onChangeText={textInput => setSearchText(textInput)}
-                value={searchText as string} // Change the type of searchText from String to string
+                value={searchText} // Change the type of searchText from String to string
                 placeholder="Search your movie here..."
                 placeholderTextColor={COLORS.WhiteRGBA32}
             />
             <TouchableOpacity style={styles.searchIcon}
-                onPress={() => props.searchFuntion(searchText)}>
+                onPress={() => props.searchFunction(searchText)}>
                 <CustomIcon name="search"
                     color={COLORS.Orange}
                     size={FONTSIZE.size_20} />
