@@ -42,7 +42,5 @@ export const movieSimilar = (id: number) => {
 };
 export const movieGenres = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`;
 export const tvGenres = `https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}`;
-export const discoverMovies = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
-export const discoverTv = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}`;
 
 
